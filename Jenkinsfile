@@ -3,7 +3,7 @@ node {
       git 'https://github.com/navneethproject02/fleetman-position-tracker'
    }
    stage('Build') {
-      sh "mvn package"
+      sh "mvn clean package"
    }
    stage('Results') {
       junit '**/target/surefire-reports/TEST-*.xml'
